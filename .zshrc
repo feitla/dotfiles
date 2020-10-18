@@ -35,6 +35,9 @@ alias ls="gls --group-directories-first --color"             # Columnized dir li
 alias ll="gls -lh --group-directories-first --color"         # Dir list
 alias l="gls -lha --group-directories-first --color" 
 
+alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
