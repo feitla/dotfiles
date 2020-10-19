@@ -1,12 +1,19 @@
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # If you come from bash you might have to change your $PATH
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:$PATH"
+
+# Visual studio code, open
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 
 alias vi="nvim"                                             # Always neovim
 
 export PATH="$HOME/.rbenv/bin:$PATH"                        # Rbenv
 eval "$(rbenv init -)"
 
-export PATH="./node_modules/.bin:$PATH"
+export PATH="./node_modules/.bin:$PATH"			    # node_modules
+export PATH="$HOME/usr/local/opt/ruby/bin:$PATH"	    # ruby
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"            # This loads nvm
@@ -34,6 +41,9 @@ alias r='bin/rails'
 alias ls="gls --group-directories-first --color"             # Columnized dir list
 alias ll="gls -lh --group-directories-first --color"         # Dir list
 alias l="gls -lha --group-directories-first --color" 
+
+alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -96,8 +106,6 @@ plugins=(
   git
 )
 
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -128,5 +136,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export YVM_DIR=/Users/pluto/.yvm
-source /usr/local/bin/yvm
+# source /usr/local/bin/yvm
+source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/opt/gettext/bin:$PATH"
+
+# export YVM_DIR=/usr/local/opt/yvm
+# [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
