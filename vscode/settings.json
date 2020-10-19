@@ -1,0 +1,292 @@
+{
+  // ===
+  // GENERAL FORMATTING
+  // ===
+  "window.zoomLevel": 0,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "editor.fontFamily": "Hack",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "off",
+  "editor.formatOnSave": false,
+  "editor.insertSpaces": true, // luda added
+  "emmet.triggerExpansionOnTab": true,
+  "workbench.activityBar.visible": true,
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorCustomizations": {
+
+
+    "activityBarBadge.background": "#FF7042",
+    "list.activeSelectionForeground": "#FF7042",
+    "list.inactiveSelectionForeground": "#FF7042",
+    "list.highlightForeground": "#FF7042",
+    //"scrollbarSlider.activeBackground": "#FF704250",
+    "editorSuggestWidget.highlightForeground": "#FF7042",
+    "textLink.foreground": "#FF7042",
+    "progressBar.background": "#FF7042",
+    "pickerGroup.foreground": "#FF7042",
+    "tab.activeBorder": "#FF7042",
+    "notificationLink.foreground": "#FF7042",
+    "editorWidget.resizeBorder": "#FF7042",
+    "editorWidget.border": "#FF7042",
+    "settings.modifiedItemIndicator": "#FF7042",
+    "settings.headerForeground": "#FF7042",
+    "panelTitle.activeBorder": "#FF7042",
+    "breadcrumb.activeSelectionForeground": "#FF7042",
+    "menu.selectionForeground": "#FF7042",
+    "menubar.selectionForeground": "#FF7042",
+    "editor.lineHighlightBackground": "#111111", // luda added
+    "editorBracketMatch.border": "#8B99E8", // luda added
+    "sideBar.foreground": "#decece", // luda added
+    "editorOverviewRuler.bracketMatchForeground": "#CA58E8", // luda added
+  },
+  "material-icon-theme.folders.color": "#42a5f5",
+  "html.format.endWithNewline": true,
+  "vetur.validation.template": true,
+  "javascript.format.enable": true,
+  "javascript.format.insertSpaceAfterConstructor": true,
+  "json.format.enable": true,
+  "standard.autoFixOnSave": true,
+  "standard.options": {
+    "globals": [
+      "$",
+      "jQuery",
+      "fetch",
+      "FileReader",
+      "FormData",
+      "Image"
+    ],
+    "ignore": [
+      "node_modules/**"
+    ],
+    "parser": "babel-eslint"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    "vue"
+  ],
+  "vetur.validation.script": false,
+  "vetur.format.scriptInitialIndent": true,
+  "auto-comment-blocks.singleLineBlockOnEnter": true,
+  "editor.scrollBeyondLastLine": false,
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html"
+  },
+  "emmet.showSuggestionsAsSnippets": true,
+  "files.associations": {
+    "*.inky": "html"
+  },
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  // ===
+  // CSS
+  // ===
+  "stylelint.enable": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "vetur.validation.style": false,
+  "vetur.format.styleInitialIndent": false,
+  "vetur.format.defaultFormatter.scss": "prettier",
+  // "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatter.css": "prettier",
+  "vetur.format.defaultFormatter.postcss": "prettier",
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      // Prettier option here
+      "semi": false,
+      "stylelintIntegration": true,
+      "eslintIntegration": true,
+      "singleQuote": true,
+      // "bracketSpacing": false,
+      // "arrowParens": "avoid",
+      // "proseWrap": false
+    },
+    "prettyhtml": {
+      "printWidth": 1080,
+      "singleQuote": false,
+      "wrapAttributes": false
+    },
+    "js-beautify-html": {
+      "wrapLineLength": 0,
+      "wrapAttributes": "force-aligned"
+    }
+  },
+  "explorer.confirmDragAndDrop": false,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "explorer.confirmDelete": false,
+  "material-icon-theme.showReloadMessage": false,
+  "workbench.statusBar.visible": true,
+  "editor.acceptSuggestionOnEnter": "off",
+  "materialTheme.accent": "Orange",
+  "peacock.favoriteColors": [
+    {
+      "name": "Angular Red",
+      "value": "#b52e31"
+    },
+    {
+      "name": "Auth0 Orange",
+      "value": "#eb5424"
+    },
+    {
+      "name": "Azure Blue",
+      "value": "#007fff"
+    },
+    {
+      "name": "C# Purple",
+      "value": "#68217A"
+    },
+    {
+      "name": "Gatsby Purple",
+      "value": "#639"
+    },
+    {
+      "name": "Go Cyan",
+      "value": "#5dc9e2"
+    },
+    {
+      "name": "Java Blue-Gray",
+      "value": "#557c9b"
+    },
+    {
+      "name": "JavaScript Yellow",
+      "value": "#f9e64f"
+    },
+    {
+      "name": "Mandalorian Blue",
+      "value": "#1857a4"
+    },
+    {
+      "name": "Node Green",
+      "value": "#215732"
+    },
+    {
+      "name": "React Blue",
+      "value": "#00b3e6"
+    },
+    {
+      "name": "Something Different",
+      "value": "#832561"
+    },
+    {
+      "name": "Vue Green",
+      "value": "#42b883"
+    }
+  ],
+  "peacock.darkForegroundColor": "",
+  "peacock.surpriseMeOnStartup": true,
+  "cSpell.userWords": [
+    "corejs",
+    "demi",
+    "dropzone",
+    "id",
+    "koho",
+    "koho id",
+    "listify",
+    "mixins",
+    "polyfill",
+    "styleguide",
+    "transpiled",
+    "uncollectible",
+    "vnode",
+    "vuetify",
+    "vuex"
+  ],
+  "bracket-pair-colorizer-2.highlightActiveScope": true,
+  "bracket-pair-colorizer-2.activeScopeCSS": [
+    "backgroundColor: {color}",
+    "borderStyle : solid",
+    "borderWidth : 1px",
+    "borderColor : {color}",
+    "opacity: 0.5"
+  ],
+  "eslint.run": "onSave",
+  "eslint.autoFixOnSave": true,
+  "files.autoSave": "onFocusChange",
+  "highlight-matching-tag.noDefaultEmptyElements": true,
+  "editor.hover.delay": 500,
+  "editor.formatOnPaste": true,
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.singleQuote": true,
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "git-commit",
+    "go",
+    "handlebars",
+    "haskell",
+    "html",
+    "jade",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "latex",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "pug",
+    "python",
+    "restructuredtext",
+    "rust",
+    "scala",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+    "yml"
+  ],
+  "peacock.affectActivityBar": false,
+  "peacock.affectTabActiveBorder": true,
+  "peacock.darkenLightenPercentage": 8,
+  "peacock.keepBadgeColor": true,
+  "peacock.surpriseMeFromFavoritesOnly": true,
+  "editor.matchBrackets": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "tabnine.experimentalAutoImports": true,
+  "outline.showConstructors": false,
+  "files.exclude": {
+    "*.snapshot": true,
+    "**/.cache": true,
+    "**/log/*": true,
+    "**/public/**": true,
+    "**/vcr_cassettes/**": true,
+    "**/yarn.lock": true,
+    "fleet/*": true
+  },
+  "search.exclude": {
+    "**/public/**": true,
+    "**/vcr_cassettes/**": true
+  }
+}
+
