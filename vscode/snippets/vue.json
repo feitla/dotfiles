@@ -1,0 +1,25 @@
+{
+  "new Vue component": {
+    "prefix": "vue",
+    "body": [
+      "<template>",
+      "\t<div>$1</div>",
+      "</template>",
+      "<script>",
+      "export default {",
+      "\tname: '$TM_FILENAME_BASE',",
+      "\tcomponents: {},",
+      "\tprops: {},",
+      "\tdata () {",
+      "\t\treturn {}",
+      "\t},",
+      "\tcomputed: {},",
+      "\tmethods: {}",
+      "}",
+      "</script>",
+      "<style lang=\"scss\" scoped>",
+      "</style>",
+      ""
+    ]
+  }
+}
