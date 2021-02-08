@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# This prepare-commit-msg hook prepends the JIRA ticket number to the commit
+# message if the branch name contains the PROJECT_PREFIX and the number.
+#
+# e.g. [FT-123] This is my commit message.
+
+# Set to JIRA Project Prefix
+PROJECT_PREFIX="KOHO"
+
+# Get the name of the branch in the current working tree.
+NAME=$(git branch | grep '*' | sed 's/* //')
+
+# Check the branch name for the ticket pattern
+ISSUE_NUMBER=`echo $NAME | grep -o -E "$PROJECT_PREFIX\-[[:digit:]]+"`
+
+# If branch contains a match for an issue number, and if everything before '#' in the
+# current comment message does not already have the issue number, prepend the commit
+# message with '[<issue_number>] <commit message>'.
+if [ -n "$ISSUE_NUMBER" ] && [ `cat $1 | sed s/#.*//g | grep -c $ISSUE_NUMBER` -eq 0 ]
+then
+  echo "$ISSUE_NUMBER $(cat $1)" > $1
+fi
