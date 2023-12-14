@@ -1,0 +1,137 @@
+alias g='git'
+
+alias gst='g status'
+
+alias gfe='g fetch'
+
+alias gco='g checkout'
+alias gcb='g checkout -b'
+alias gcd='gco develop'
+alias gcm='gco master'
+
+alias ggpush='g push origin $(current_branch)'
+alias ggpushf='ggpush --force-with-lease'
+alias ggpusht='g push origin --tags'
+alias gp='g push'
+
+alias gc='g commit'
+alias gc!='gc --amend'
+alias gca='gc -a'
+alias gca!='gca --amend'
+alias gcam='gca -m'
+
+alias gl='g pull'
+alias glr='gl --rebase'
+alias glff='gl --ff-only'
+
+alias gm='g merge'
+alias gmff='gm --ff-only'
+alias gmnff='gm --no-ff'
+
+alias ga='g add'
+alias gap='ga --patch'
+alias gai='ga -i'
+
+alias gb='g branch'
+alias gba='g branch -a'
+
+alias ggr='git grep'
+
+alias grb='g rebase'
+alias grbi='grb --interactive'
+alias grbiod='grbi origin/develop'
+alias grbiom='grbi origin/master'
+alias grbc='grb --continue'
+alias grba='grb --abort'
+                                                                                                                                                                              39,0-1         Top
+alias gt='g tag'
+
+alias gre='g reset'
+alias greh='gre --hard'
+alias ggrh='greh origin/$(current_branch)'
+
+grf() {
+        gre @~ "$@" && gc! --no-verify --no-edit
+}
+
+alias gd='g diff'
+alias gdo='gd origin/$(current_branch) $(current_branch)'
+
+alias gcp='g cherry-pick'
+alias gcpa='gcp --abort'
+alias gcpc='gcp --continue'
+
+alias gsts='git stash show --text'
+alias gsta='g stash'
+alias gstp='gsta pop'
+alias gstd='gsta drop'
+
+alias gcl='g clone'
+
+alias gr='g remote'
+
+alias gt='g tag'
+
+alias gre='g reset'
+alias greh='gre --hard'
+alias ggrh='greh origin/$(current_branch)'
+
+grf() {
+        gre @~ "$@" && gc! --no-verify --no-edit
+}
+
+alias gd='g diff'
+alias gdo='gd origin/$(current_branch) $(current_branch)'
+
+alias gcp='g cherry-pick'
+alias gcpa='gcp --abort'
+alias gcpc='gcp --continue'
+
+alias gsts='git stash show --text'
+alias gsta='g stash'
+alias gstp='gsta pop'
+alias gstd='gsta drop'
+
+alias gcl='g clone'
+
+alias gr='g remote'
+
+# Directory listings
+# LS_COLORS='no=01;37:fi=01;37:di=07;96:ln=01;36:pi=01;32:so=01;35:do=01;35:bd=01;33:cd=01;33:ex=01;31:mi=00;05;37:or=00;05;37:'
+# -G Add colors to ls
+# -l Long format
+# -h Short size suffixes (B, K, M, G, P)
+# -p Postpend slash to folders
+alias ls='ls -G -h -p '
+alias ll='ls -l -G -h -p '
+
+alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+#function that retrieves the current branch name
+git_current_branch() {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+}
+
+gcos() {
+  git checkout $(git branch --list "*KOHO-$1*")
+}
+
+gbranch() {
+  git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always | column -ts'|'
+}
+
+# Delete local merged branches
+function delete_local_merged_master_branches() {
+  git branch --merged master | grep -v master | xargs git branch -d
+}
+
+# Delete remote merged branches
+function delete_remote_merged_branches() {
+  for BRANCH in `git branch -r --merged origin/master |\
+                 grep -v master |\
+                 cut -d/ -f2-`
+  do
+    git push origin :$BRANCH
+  done
+}
